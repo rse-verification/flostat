@@ -1,0 +1,72 @@
+
+INPUTS  { x fl32 :(0.0,1.0) ; y fl32 :(0.0,1.0); z fl32 :(0.0,1.0); }
+
+OUTPUTS  { return; }
+
+EXPRS{
+  sigma rnd32 = 10.0;
+  rho rnd32 = 28.0;
+  beta rnd32 = (8.0 / 3.0);
+  time rnd32 = 0.01;
+  x1 rnd32 = x + time * (sigma * (y - x));
+  y1 rnd32 = y + time * (x * (rho - z) - y);
+  z1 rnd32 = z + time * (x * y - beta * z);
+  x2 rnd32 = x1 + time * (sigma * (y1 - x1));
+  y2 rnd32 = y1 + time * (x1 * (rho - z1) - y1);
+  z2 rnd32 = z1 + time * (x1 * y1 - beta * z1);
+  x3 rnd32 = x2 + time * (sigma * (y2 - x2));
+  y3 rnd32 = y2 + time * (x2 * (rho - z2) - y2);
+  z3 rnd32 = z2 + time * (x2 * y2 - beta * z2);
+  x4 rnd32 = x3 + time * (sigma * (y3 - x3));
+  y4 rnd32 = y3 + time * (x3 * (rho - z3) - y3);
+  z4 rnd32 = z3 + time * (x3 * y3 - beta * z3);
+  x5 rnd32 = x4 + time * (sigma * (y4 - x4));
+  y5 rnd32 = y4 + time * (x4 * (rho - z4) - y4);
+  z5 rnd32 = z4 + time * (x4 * y4 - beta * z4);
+  x6 rnd32 = x5 + time * (sigma * (y5 - x5));
+  y6 rnd32 = y5 + time * (x5 * (rho - z5) - y5);
+  z6 rnd32 = z5 + time * (x5 * y5 - beta * z5);
+  x7 rnd32 = x6 + time * (sigma * (y6 - x6));
+  y7 rnd32 = y6 + time * (x6 * (rho - z6) - y6);
+  z7 rnd32 = z6 + time * (x6 * y6 - beta * z6);
+  x8 rnd32 = x7 + time * (sigma * (y7 - x7));
+  y8 rnd32 = y7 + time * (x7 * (rho - z7) - y7);
+  z8 rnd32 = z7 + time * (x7 * y7 - beta * z7);
+  x9 rnd32 = x8 + time * (sigma * (y8 - x8));
+  y9 rnd32 = y8 + time * (x8 * (rho - z8) - y8);
+  z9 rnd32 = z8 + time * (x8 * y8 - beta * z8);
+  x10 rnd32 = x9 + time * (sigma * (y9 - x9));
+  y10 rnd32 = y9 + time * (x9 * (rho - z9) - y9);
+  z10 rnd32 = z9 + time * (x9 * y9 - beta * z9);
+  x11 rnd32 = x10 + time * (sigma * (y10 - x10));
+  y11 rnd32 = y10 + time * (x10 * (rho - z10) - y10);
+  z11 rnd32 = z10 + time * (x10 * y10 - beta * z10);
+  x12 rnd32 = x11 + time * (sigma * (y11 - x11));
+  y12 rnd32 = y11 + time * (x11 * (rho - z11) - y11);
+  z12 rnd32 = z11 + time * (x11 * y11 - beta * z11);
+  x13 rnd32 = x12 + time * (sigma * (y12 - x12));
+  y13 rnd32 = y12 + time * (x12 * (rho - z12) - y12);
+  z13 rnd32 = z12 + time * (x12 * y12 - beta * z12);
+  x14 rnd32 = x13 + time * (sigma * (y13 - x13));
+  y14 rnd32 = y13 + time * (x13 * (rho - z13) - y13);
+  z14 rnd32 = z13 + time * (x13 * y13 - beta * z13);
+  x15 rnd32 = x14 + time * (sigma * (y14 - x14));
+  y15 rnd32 = y14 + time * (x14 * (rho - z14) - y14);
+  z15 rnd32 = z14 + time * (x14 * y14 - beta * z14);
+  x16 rnd32 = x15 + time * (sigma * (y15 - x15));
+  y16 rnd32 = y15 + time * (x15 * (rho - z15) - y15);
+  z16 rnd32 = z15 + time * (x15 * y15 - beta * z15);
+  x17 rnd32 = x16 + time * (sigma * (y16 - x16));
+  y17 rnd32 = y16 + time * (x16 * (rho - z16) - y16);
+  z17 rnd32 = z16 + time * (x16 * y16 - beta * z16);
+  x18 rnd32 = x17 + time * (sigma * (y17 - x17));
+  y18 rnd32 = y17 + time * (x17 * (rho - z17) - y17);
+  z18 rnd32 = z17 + time * (x17 * y17 - beta * z17);
+  x19 rnd32 = x18 + time * (sigma * (y18 - x18));
+  y19 rnd32 = y18 + time * (x18 * (rho - z18) - y18);
+  z19 rnd32 = z18 + time * (x18 * y18 - beta * z18);
+  x20 rnd32 = x19 + time * (sigma * (y19 - x19));
+  y20 rnd32 = y19 + time * (x19 * (rho - z19) - y19);
+  z20 rnd32 = z19 + time * (x19 * y19 - beta * z19);
+  return rnd32 = y20;
+}

@@ -1,0 +1,18 @@
+
+INPUTS  { x fl32 :(0.0,1.0) ; y fl32 :(0.0,1.0); z fl32 :(0.0,1.0); }
+
+OUTPUTS  { return; }
+
+EXPRS{
+  sigma rnd32 = 10.0;
+  rho rnd32 = 28.0;
+  beta rnd32 = (8.0 / 3.0);
+  time rnd32 = 0.01;
+  x1 rnd32 = x + time * (sigma * (y - x));
+  y1 rnd32 = y + time * (x * (rho - z) - y);
+  z1 rnd32 = z + time * (x * y - beta * z);
+  x2 rnd32 = x1 + time * (sigma * (y1 - x1));
+  y2 rnd32 = y1 + time * (x1 * (rho - z1) - y1);
+  z2 rnd32 = z1 + time * (x1 * y1 - beta * z1);
+  return rnd32 = y2;
+}

@@ -1,0 +1,8 @@
+
+INPUTS  { x1 fl32 : (-2.0, 2.0); x0 fl32 : (-2.0, 2.0) ; }
+
+OUTPUTS  { return; }
+
+EXPRS {
+    return rnd32 = (0.7) * x1 - (1.3) * x0 + (1.4) * ((0.7) * x0);
+}

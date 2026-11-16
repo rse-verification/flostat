@@ -1,0 +1,7 @@
+INPUTS  { u fl32 :(0.0,1.0); }
+
+OUTPUTS  { return; }
+
+EXPRS {
+	return rnd32 = (3.0 * u * u * u - 6.0 * u * u + 4.0) / 6.0;
+}

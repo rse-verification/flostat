@@ -1,0 +1,7 @@
+INPUTS  {a fl32 : (5, 10); b fl32 : (0, 5); c fl32 : (0, 5) ; }
+
+OUTPUTS  { return; }
+
+EXPRS {
+	return rnd32 = (((((2 * a) * a) * a) - (((9 * a) * b) + (27 * c))) / 54) + (((a * a) - (3 * b)) / 9);
+}
