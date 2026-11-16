@@ -149,7 +149,7 @@ flux angle, compute the initial flux state immediately before the observer
 update, and inline the VESC Ortega-mode update and common post-update
 safeguards in a self-contained file. See
 `testfiles/ortega_programs/README.md` for the detailed input bounds and
-assumptions.
+assumptions. 
 
 The benchmark inputs used by the benchmark suite are under
 `testfiles/benchmarks/`. This directory contains the benchmark programs for
@@ -186,3 +186,9 @@ valid C program:
 Unsupported cases may stop with a diagnostic during translation or C
 compilation. A successful run only checks the generated samples; it does not
 establish correctness for inputs outside the sampled distribution.
+
+
+## License
+The flostat software is licensed under BSD 3-clause.
+The Ortega example programs are taken from https://github.com/vedderb/bldc, 
+and are licensed under GPL-3.
