@@ -152,8 +152,8 @@ safeguards in a self-contained file. See
 assumptions.
 
 The benchmark inputs used by the benchmark suite are under
-`testfiles/benchmarks/`. This directory contains the benchmark programs, both for 
-flostat and for other tools for comparison.
+`testfiles/benchmarks/`. This directory contains the benchmark programs for
+FloStat and the other comparison tools.
 
 ## Supported C syntax and limitations
 
